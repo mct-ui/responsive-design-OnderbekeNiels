@@ -186,6 +186,33 @@ a:focus {
 \*------------------------------------*/
 
 /*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flow-root;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+/*
     Objects: Row
     ---
     Creates a horizontal row that stretches the viewport and adds padding around children
@@ -207,6 +234,11 @@ a:focus {
   .o-row {
     padding-left: 48px;
     padding-right: 48px;
+  }
+
+  .o-row--md{
+      padding-top: 48px;
+      padding-bottom: 24px;
   }
 
   .o-row--lg {
@@ -458,6 +490,10 @@ a:focus {
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
+
+.u-pt-clear{
+    padding-top: 0 !important;
+}
 
 /*
     Utilities: max-width
