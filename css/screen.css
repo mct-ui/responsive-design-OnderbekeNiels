@@ -228,6 +228,10 @@ a:focus {
   background-color: #f7f7fa;
 }
 
+.o-row--gradient{
+  background-image: linear-gradient(to bottom left, #3887F7, #5051DB );
+}
+
 /* size modifiers */
 
 .o-row--lg {
@@ -543,6 +547,40 @@ a:focus {
   background-color: #3e3ea8;
 }
 
+.c-link-cta--inverse,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active {
+  color: #fff;
+}
+
+.c-link-cta--inverse::after {
+  content: " and more";
+  background-color: #fff;
+}
+
+.c-link-cta--inverse::before{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(.5);
+  transform-origin: left;
+  transition-property: transform background-color;
+  transition-duration: .175s;
+  transition-timing-function: ease-in;
+}
+
+.c-link-cta--inverse:hover {
+  color: #fff;
+}
+
+
+
+
 
 /*
     Component: Lead
@@ -644,6 +682,11 @@ a:focus {
 .u-pt-clear {
   padding-top: 0 !important;
 }
+
+.u-color-light-for-gradient{
+  color: white;
+}
+
 
 /*
     Utilities: max-width
