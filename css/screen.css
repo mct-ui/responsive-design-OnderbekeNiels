@@ -473,6 +473,7 @@ a:focus {
   }
 }
 
+
 /*
     Component: header
     ---
@@ -493,6 +494,79 @@ a:focus {
   .c-header__nav {
     display: block;
   }
+}
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.c-footer__logo {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.c-footer__nav {
+
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+      justify-content: center;
+    }
+    .c-footer__logo {
+      align-self: flex-end;
+      width: 100%;
+    }
+
+    .c-logo{
+      display: flex;
+      justify-content: center;
+    }
+
+    .c-footer__nav {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .c-footer__logo {
+      align-self: center;
+      order: 1;
+    }
+
+    .c-footer__logo .c-logo {
+        text-align: center;
+    }
+
+    .c-footer__nav {
+      display: none;
+    }
+
+    .c-footer__nav--1 {
+      display: block;
+      order: 0
+    }
+
+    .c-footer__nav--2 {
+      display: block;
+      order: 2
+    }
 }
 
 /*
