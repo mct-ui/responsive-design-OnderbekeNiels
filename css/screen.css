@@ -561,7 +561,6 @@ a:focus {
     ---
     Small cta link with custom animation
 */
-
 .c-link-cta {
   position: relative;
   display: inline-block;
@@ -570,7 +569,7 @@ a:focus {
   line-height: 24px;
   font-weight: 400;
   padding: 4px 0;
-  transition: color 0.175s ease-in;
+  /*transition: color 0.175s ease-in;*/
 }
 
 .c-link-cta,
@@ -580,9 +579,6 @@ a:focus {
 }
 
 .c-link-cta::after {
-}
-
-.c-link-cta::before {
   content: "";
   display: block;
   position: absolute;
@@ -610,33 +606,14 @@ a:focus {
 
 .c-link-cta--inverse,
 .c-link-cta--inverse:visited,
-.c-link-cta--inverse:active {
+.c-link-cta--inverse:active .c-link-cta--inverse:hover {
   color: #fff;
 }
 
-.c-link-cta--inverse::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #fff;
-  transform: scaleX(0.5);
-  transform-origin: left;
-  transition-property: transform background-color;
-  transition-duration: 0.175s;
-  transition-timing-function: ease-in;
-}
-
+.c-link-cta--inverse::after,
 .c-link-cta--inverse:hover::after {
-  content: " and more";
-  transform: scaleX(1);
   color: white;
-}
-.c-link-cta--inverse:hover {
-  color: #fff;
+  content: "";
 }
 
 /* 
